@@ -14,11 +14,10 @@ const phrasesArray = arr => {
     ['May the force be with you'],
     ['I find your lack of faith distrubing'],
     ['Scruffy looking nerf herder']
-}
-
+};
+ console.log(phrasesArray);
 //START GAME -- BUTTON FUNCTION//
-
-function startGame = ;
+buttonReset.addEventlistener(click,);
 
 //RETURN RANDOM PHRASE FROM ARRAY//
 
