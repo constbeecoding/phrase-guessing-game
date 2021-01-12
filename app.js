@@ -20,23 +20,10 @@ const phrasesArray = arr => {
  console.log(phrasesArray);
 
 //START GAME -- BUTTON FUNCTION//
-// function hideStart () {
-// if (buttonReset='clicked') {
-//     startOverlay.style.display = "none";
-// } else {
-//     startOverlay.style.display =
-// }//utton is clicked then hideStart, else show start Overlay
 
-// }
-
-buttonReset.addEventlistener('click', () => {
+buttonReset.addEventListener('click', () => {
     startOverlay.style.display = "none";
-)};
-//     if (buttonReset= 'clicked') {
-//     startOverlay.style.display = "none";
-// } else {
-//     startOverlay.style.display =
-//utton is clicked then hideStart, else show start Overlay);
+});
 
 
 //RETURN RANDOM PHRASE FROM ARRAY//
