@@ -1,10 +1,12 @@
 // VARIABLES//
 
-const qwerty = document.getElementById('querty');
-const phrase = document.getElementById('phrase');
-const buttonReset = document.getElementByClassName('.btn_reset');
+let qwerty = document.getElementById('querty');
+let phrase = document.getElementById('phrase');
+let buttonReset = document.querySelector('.btn__reset');
+let startOverlay = document.getElementById('overlay');
+//const hideStart = startOverlay.style.display = "none";
 
-const missed = ('0')
+let missed = ('0')
 
 //PHRASES ARRAY//
 
@@ -16,8 +18,26 @@ const phrasesArray = arr => {
     ['Scruffy looking nerf herder']
 };
  console.log(phrasesArray);
+
 //START GAME -- BUTTON FUNCTION//
-buttonReset.addEventlistener(click,);
+// function hideStart () {
+// if (buttonReset='clicked') {
+//     startOverlay.style.display = "none";
+// } else {
+//     startOverlay.style.display =
+// }//utton is clicked then hideStart, else show start Overlay
+
+// }
+
+buttonReset.addEventlistener('click', () => {
+    startOverlay.style.display = "none";
+)};
+//     if (buttonReset= 'clicked') {
+//     startOverlay.style.display = "none";
+// } else {
+//     startOverlay.style.display =
+//utton is clicked then hideStart, else show start Overlay);
+
 
 //RETURN RANDOM PHRASE FROM ARRAY//
 
