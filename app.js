@@ -27,13 +27,37 @@ buttonReset.addEventListener('click', () => {
 
 
 //RETURN RANDOM PHRASE FROM ARRAY//
+const getRandomPhraseAsArray = arr => {
+
+
+}
 
 //ADD THE LETTERS OF A STRING TO THE DISPLAY//
+const addPhraseToDisplay = arr => {
+
+
+}
 
 //CHECK IF A LETTER IS IN THE PHRASE//
+const checkLetter = button => {
+
+}
 
 //CHECK IF THE GAME HAS BEEN WON OR LOST//
+const checkWin = () => {
+
+
+}
 
 //LISTEN FOR THE START GAME BUTTON TO BE PRESSED//
+startButton.addEventListener('click', () => {
+
+
+
+});
 
 //LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED//
+qwerty.addEventListener('click', e => {
+
+
+});
