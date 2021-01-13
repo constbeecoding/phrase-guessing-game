@@ -3,7 +3,7 @@
 - [x] Create missed variable, initialized w/ 0 to track number of guesses.(5 times loses the game)
 - [x] Create an array of Named Phrases (at least 5 strings of letters only)
 - [x] Attach event listener to "Start the Game Button" to hide Start Screen Overlay
-- [] Create a getRandomPhraseAsArray function. Call it and pass phrases array to it.
+- [x] Create a getRandomPhraseAsArray function. Call it and pass phrases array to it.
 - [] Create a function "stub" for checkLetter function. (use li elements, "show" class, return the match variable).
 - [] Add an event listener to the keyboard. Listen for click event. Chosen and missed counters.
 - [] Create checkWin function. (li, dsplay overlay of flex)

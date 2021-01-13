@@ -10,14 +10,14 @@ let missed = ('0')
 
 //PHRASES ARRAY//
 
-const phrasesArray = arr => {
-    ['Id just as soon kiss a Wookiee'],
-    ['Help me ObiWan Kenobi'],
-    ['May the force be with you'],
-    ['I find your lack of faith distrubing'],
-    ['Scruffy looking nerf herder']
+const phrases = arr => {
+    'Id just as soon kiss a Wookiee',
+    'Help me ObiWan Kenobi',
+    'May the force be with you',
+    'I find your lack of faith distrubing',
+    'Scruffy looking nerf herder'
 };
- console.log(phrasesArray);
+ console.log(phrases);
 
 //START GAME -- BUTTON FUNCTION//
 
@@ -25,15 +25,14 @@ buttonReset.addEventListener('click', () => {
     startOverlay.style.display = "none";
 });
 
-
 //RETURN RANDOM PHRASE FROM ARRAY//
-const randomNumber = phrasesArray[Math.floor(Math.random() * phrasesArray.length)];
 
-function getRandomPhraseAsArray () {
-    const 
-
+const getRandomPhraseAsArray = arr => {
+    const randomNumber = arr[Math.floor(Math.random() * arr.length)];
+    return randomNumber.split('');
 }
-getRandomPhraseAsArray(phrases);
+
+
 //ADD THE LETTERS OF A STRING TO THE DISPLAY//
 // const addPhraseToDisplay = function (arr) {
 // }
