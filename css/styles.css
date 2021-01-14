@@ -1,6 +1,6 @@
 /* Main styles */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
-
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 /* Variables */
 
 :root {
@@ -37,7 +37,7 @@ li, ol, ul {
 h2 {
   margin: 0;
   text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Audiowide', sans-serif;
   font-size: var(--font-size-large);
   margin: 0;
 }
@@ -72,7 +72,7 @@ button {
 /* Title */
 
 .header {
-  color: var(--color-start);
+  color: #000;
 }
 
 /* Phrase */
@@ -135,7 +135,7 @@ button {
 }
 
 .title {
-  color: #FFF;
+  color: #000;
 }
 
 .start {

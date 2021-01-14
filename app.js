@@ -29,14 +29,20 @@ buttonReset.addEventListener('click', () => {
 
 const getRandomPhraseAsArray = arr => {
     const randomNumber = arr[Math.floor(Math.random() * arr.length)];
-    return randomNumber.split('');
+    return randomSplit = randomNumber.split('');
+} 
+getRandomPhraseAsArray(phrases);
+
+//ADD THE LETTERS OF A STRING TO THE DISPLAY//
+function addPhraseToDisplay(phrases) {
+    for (let i = 0; i < phrases.length; i++) {
+        document.createElement("LI");
+        li.appendChild();
+    
+        const element = phrases[i];
+    
+    }
 }
-
-
-// ADD THE LETTERS OF A STRING TO THE DISPLAY//
-// const addPhraseToDisplay = function (arr) {
-
-// }
 
 // //CHECK IF A LETTER IS IN THE PHRASE//
 // const checkLetter = button => {
