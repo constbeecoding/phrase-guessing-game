@@ -33,8 +33,9 @@ const getRandomPhraseAsArray = arr => {
 }
 
 
-//ADD THE LETTERS OF A STRING TO THE DISPLAY//
+// ADD THE LETTERS OF A STRING TO THE DISPLAY//
 // const addPhraseToDisplay = function (arr) {
+
 // }
 
 // //CHECK IF A LETTER IS IN THE PHRASE//
