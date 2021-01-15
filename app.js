@@ -5,19 +5,18 @@ let phrase = document.getElementById('phrase');
 let buttonReset = document.querySelector('.btn__reset');
 let startOverlay = document.getElementById('overlay');
 
-
 let missed = ('0')
 
 //PHRASES ARRAY//
 
-const phrases = arr => {
+const phrases = [
     'Id just as soon kiss a Wookiee',
     'Help me ObiWan Kenobi',
     'May the force be with you',
     'I find your lack of faith distrubing',
     'Scruffy looking nerf herder'
-};
- console.log(phrases);
+];
+
 
 //START GAME -- BUTTON FUNCTION//
 
@@ -28,30 +27,31 @@ buttonReset.addEventListener('click', () => {
 //RETURN RANDOM PHRASE FROM ARRAY//
 
 const getRandomPhraseAsArray = arr => {
-    const randomNumber = arr[Math.floor(Math.random() * arr.length)];
-    
-    return randomSplit = randomNumber.split('');
+    let i = Math.floor(Math.random() * arr.length);
+    return arr[i].split('');
 } 
+
 getRandomPhraseAsArray(phrases);
 
 //ADD THE LETTERS OF A STRING TO THE DISPLAY//
 
-function addPhraseToDisplay(phrases) {
+function addPhraseToDisplay(arr) {
     for (let i = 0; i < phrases.length; i++) {
        const li = document.createElement("LI");
-        //put character inside of the li
-        //append li to the #phrase ul in HTML
-        //if (char is letter) {
-        //add class .letter to li
-
-       // } else {
-        // add class .space to li
-        //}
+       const ul = document.getElementById('phrase');
+       // li.appendChild();
+        ul.appendChild(li);
+        if (arr[i] =! '  ') {
+           li.classList.add('.letter');
+        } else {
+            li.classList.add('.space;');
+        }
         
-        //const element = phrases[i];
-    
     }
 }
+const randomPhrase = getRandomPhraseAsArray(phrases);
+addPhraseToDisplay(randomPhrase);
+
 
 // //CHECK IF A LETTER IS IN THE PHRASE//
 
