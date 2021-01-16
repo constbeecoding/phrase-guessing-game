@@ -8,7 +8,7 @@
 - Training my "Programmer Brain"
 
 ## Triumphs
-- Playing around with styling.
+- Playing around with Star Wars styling.
 - I built a functioning GAME. 
 - Learned how to use and manipulate arrays.
 

@@ -49,27 +49,27 @@ function addPhraseToDisplay(arr) {
             li.classList.add('space');
         }  
     }
-}
+};
 const randomPhrase = getRandomPhraseAsArray(phrases);
 addPhraseToDisplay(randomPhrase);
 
 
 // //CHECK IF A LETTER IS IN THE PHRASE//
 
-const checkLetter = button => {
-    const allLi = document.getElementsByClassName('letter');
-    if (textContent) {
-        allLi.style.display = true;
-    } else {
-        
-    }
+function checkLetter(btn) {
+    const allLetters = document.getElementsByClassName('letter'); //every letter in a phrase
+    let match = null;
 
-    for (let i = 0; i < arr.length; i++) {
-        const element = arr[i];
-        
+    for (let i = 0; i < allLetters.length; i++) {
+        const element = allLetters[i];
+
+        if (btn === allLetters[i].textContent) {
+            allLetters.classList.add= ('show');
+        } 
     }
-}
-console.log(allLi);
+    return match;
+};
+
 // //CHECK IF THE GAME HAS BEEN WON OR LOST//
 
 // const checkWin = () => {
