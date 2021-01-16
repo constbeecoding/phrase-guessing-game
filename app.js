@@ -27,8 +27,8 @@ buttonReset.addEventListener('click', () => {
 //RETURN RANDOM PHRASE FROM ARRAY//
 
 const getRandomPhraseAsArray = arr => {
-    let i = Math.floor(Math.random() * arr.length);
-    return arr[i].split('');
+    let i = Math.floor(Math.random() * arr.length); //random array is returned.
+    return arr[i].split(''); //each letter and space in array is "split"
 } 
 
 getRandomPhraseAsArray(phrases);
@@ -36,28 +36,30 @@ getRandomPhraseAsArray(phrases);
 //ADD THE LETTERS OF A STRING TO THE DISPLAY//
 
 function addPhraseToDisplay(arr) {
-    for (let i = 0; i < phrases.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
        const li = document.createElement("LI");
-       const ul = document.getElementById('phrase');
-       // li.appendChild();
+       const ul = document.querySelector('div#phrase.ul');
+       
+       //put character inside the list item li.appendChild(?);
         ul.appendChild(li);
-        if (arr[i] =! '  ') {
-           li.classList.add('.letter');
+        if (arr[i] === ' ') {
+           li.classList.add('space');
         } else {
-            li.classList.add('.space;');
+            li.classList.add('letter');
         }
         
     }
 }
 const randomPhrase = getRandomPhraseAsArray(phrases);
 addPhraseToDisplay(randomPhrase);
-
+console.log(ul);
 
 // //CHECK IF A LETTER IS IN THE PHRASE//
 
-// const checkLetter = button => {
+const checkLetter = button => {
+    const allLi = document.gete
 
-// }
+}
 
 // //CHECK IF THE GAME HAS BEEN WON OR LOST//
 
