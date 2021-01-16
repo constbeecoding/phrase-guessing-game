@@ -63,18 +63,30 @@ function checkLetter(btn) {
     for (let i = 0; i < allLetters.length; i++) {
         const element = allLetters[i];
 
-        if (btn === allLetters[i].textContent) {
-            allLetters.classList.add= ('show');
+        if (btn === element[i].textContent) {
+            element.classList.add('show');
         } 
     }
     return match;
 };
+console.log(element);
 
 // //CHECK IF THE GAME HAS BEEN WON OR LOST//
 
-// const checkWin = () => {
-
-
+// function checkWin = () => {
+// classLetter = getElementByClassName('letter');
+// classShow =  getElementByClassName('show');
+// if (2 variables are =) {
+//    add WIN statements
+        //add win class to start start overlay
+        //add headline text to show person won
+        //change display property of overlay to flex
+// } else if (missed counter > 4) {
+//    add LOSE Statements
+        //add lose class to start start overlay
+        //add headline text to show person lost
+        //change display property of overlay to flex
+//  }
 // }
 
 // //LISTEN FOR THE START GAME BUTTON TO BE PRESSED//
@@ -88,6 +100,9 @@ function checkLetter(btn) {
 // //LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED//
 
 // qwerty.addEventListener('click', e => {
+//if (btn = clicked) {
+    //give key/button chosen class and set to disabled
+// } else {
+    
+// }
 
-
-// });
