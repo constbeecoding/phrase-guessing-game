@@ -112,6 +112,7 @@ button {
 }
 
 .btn__reset {
+  font-family: 'Audiowide';
   padding: 8px;
   margin: 50px auto;
   background: #FFFFFF;
@@ -139,11 +140,11 @@ button {
 }
 
 .start {
-  background-color: var(--color-start);
+  background-color: #fff;
 }
 
 .start a {
-  color: var(--color-win);
+  color: var(--color-lose);
 }
 
 .win {

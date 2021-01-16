@@ -57,10 +57,19 @@ addPhraseToDisplay(randomPhrase);
 // //CHECK IF A LETTER IS IN THE PHRASE//
 
 const checkLetter = button => {
-    const allLi = document.gete
+    const allLi = document.getElementsByClassName('letter');
+    if (textContent) {
+        allLi.style.display = true;
+    } else {
+        
+    }
 
+    for (let i = 0; i < arr.length; i++) {
+        const element = arr[i];
+        
+    }
 }
-
+console.log(allLi);
 // //CHECK IF THE GAME HAS BEEN WON OR LOST//
 
 // const checkWin = () => {
