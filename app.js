@@ -37,22 +37,22 @@ getRandomPhraseAsArray(phrases);
 
 function addPhraseToDisplay(arr) {
     for (let i = 0; i < arr.length; i++) {
-       const li = document.createElement("LI");
-       const ul = document.querySelector('div#phrase.ul');
-       
-       //put character inside the list item li.appendChild(?);
+        let li = document.createElement("LI");
+        let ul = document.querySelector('ul');
+
+        li.textContent = arr[i];
         ul.appendChild(li);
-        if (arr[i] === ' ') {
-           li.classList.add('space');
-        } else {
-            li.classList.add('letter');
-        }
         
+        if (arr[i] != ' ') {
+            li.classList.add('letter');
+        } else {
+            li.classList.add('space');
+        }  
     }
 }
 const randomPhrase = getRandomPhraseAsArray(phrases);
 addPhraseToDisplay(randomPhrase);
-console.log(ul);
+
 
 // //CHECK IF A LETTER IS IN THE PHRASE//
 
