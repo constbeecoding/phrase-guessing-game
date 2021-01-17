@@ -57,6 +57,7 @@ addPhraseToDisplay(randomPhrase);
 // //CHECK IF A LETTER IS IN THE PHRASE//
 
 function checkLetter(btn) {
+    btn = document.querySelector(querty.button);
     const allLetters = document.getElementsByClassName('letter'); //every letter in a phrase
     let match = null;
 
@@ -70,6 +71,9 @@ function checkLetter(btn) {
     return match;
 };
 console.log(element);
+
+//if a letter you loop through in a random phrase equals a letter pressed, 
+//show that letter in the phrase display
 
 // //CHECK IF THE GAME HAS BEEN WON OR LOST//
 
