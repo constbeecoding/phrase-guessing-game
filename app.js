@@ -76,6 +76,7 @@ console.log(element);
 // show that letter in the phrase display
 
 //CHECK IF THE GAME HAS BEEN WON OR LOST//
+
 const checkWin = () => {
 classLetter = getElementByClassName('letter');
 classShow =  getElementByClassName('show');
@@ -84,13 +85,14 @@ if (classLetter === classShow) {
    //add WIN statements
         startOverlay.classList.add('win');
         //add headline text to show person won
+        headlineLost = document.createTextNode('The force is strong with you!');
         startOverlay.style.display = ('flex'); 
         //change display property of overlay to flex
 } else if (missed > 4) {
    //add LOSE Statements
         startOverlay.classList.add('lose');
         //add headline text to show person lost
-        headlineLost = document.createTextNode('Patience you must have my young Padawan');
+        headlineLost = document.createTextNode('Patience you must have my young Padawan...');
         //change display property of overlay to flex
         startOverlay.style.display = ('flex'); 
         //change display property of overlay to flex
