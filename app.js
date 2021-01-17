@@ -73,27 +73,31 @@ function checkLetter(btn) {
 console.log(element);
 
 //if a letter you loop through in a random phrase equals a letter pressed, 
-//show that letter in the phrase display
+// show that letter in the phrase display
 
-// //CHECK IF THE GAME HAS BEEN WON OR LOST//
+//CHECK IF THE GAME HAS BEEN WON OR LOST//
+const checkWin = () => {
+classLetter = getElementByClassName('letter');
+classShow =  getElementByClassName('show');
 
-// function checkWin = () => {
-// classLetter = getElementByClassName('letter');
-// classShow =  getElementByClassName('show');
-// if (2 variables are =) {
-//    add WIN statements
-        //add win class to start start overlay
+if (classLetter === classShow) {
+   //add WIN statements
+        startOverlay.classList.add('win');
         //add headline text to show person won
+        startOverlay.style.display = ('flex'); 
         //change display property of overlay to flex
-// } else if (missed counter > 4) {
-//    add LOSE Statements
-        //add lose class to start start overlay
+} else if (missed > 4) {
+   //add LOSE Statements
+        startOverlay.classList.add('lose');
         //add headline text to show person lost
+        headlineLost = document.createTextNode('Patience you must have my young Padawan');
         //change display property of overlay to flex
-//  }
-// }
+        startOverlay.style.display = ('flex'); 
+        //change display property of overlay to flex
+    }
+}
 
-// //LISTEN FOR THE START GAME BUTTON TO BE PRESSED//
+//LISTEN FOR THE START GAME BUTTON TO BE PRESSED//
 
 // startButton.addEventListener('click', () => {
 
@@ -101,11 +105,11 @@ console.log(element);
 
 // });
 
-// //LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED//
+//LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED//
 
 // qwerty.addEventListener('click', e => {
-//if (btn = clicked) {
-    //give key/button chosen class and set to disabled
+// if (btn = clicked) {
+//     give key/button chosen class and set to disabled
 // } else {
     
 // }
