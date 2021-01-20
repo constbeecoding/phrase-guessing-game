@@ -57,25 +57,24 @@ addPhraseToDisplay(randomPhrase);
 // //CHECK IF A LETTER IS IN THE PHRASE//
 
 function checkLetter(btn) {
-    btn = document.querySelector(querty.button);
-    const allLetters = document.getElementsByClassName('letter'); //every letter in a phrase
+   
     let match = null;
 
     for (let i = 0; i < allLetters.length; i++) {
-        const element = allLetters[i];
 
-        if (btn === element[i].textContent) {
+        const allLetters = document.getElementsByClassName('letter'); //every letter in a phrase
+       
+
+        if (btn.textContent === allLetters[i].textContent) {
             element.classList.add('show');
-        } 
-    }
-    return match;
+            match = btn.textContent;
+         }
+    } 
+    return match;     
 };
-console.log(element);
 
-//if a letter you loop through in a random phrase equals a letter pressed, 
-// show that letter in the phrase display
 
-//CHECK IF THE GAME HAS BEEN WON OR LOST//
+// CHECK IF THE GAME HAS BEEN WON OR LOST//
 
 const checkWin = () => {
 classLetter = getElementByClassName('letter');
@@ -97,22 +96,21 @@ if (classLetter === classShow) {
         startOverlay.style.display = ('flex'); 
         //change display property of overlay to flex
     }
-}
+};
 
-//LISTEN FOR THE START GAME BUTTON TO BE PRESSED//
+// //LISTEN FOR THE START GAME BUTTON TO BE PRESSED//
 
-// startButton.addEventListener('click', () => {
+// // startButton.addEventListener('click', () => {
 
 
 
-// });
+// // });
 
-//LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED//
+// //LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED//
 
-// qwerty.addEventListener('click', e => {
-// if (btn = clicked) {
-//     give key/button chosen class and set to disabled
-// } else {
+// // qwerty.addEventListener('click', e => {
+// // if (btn = clicked) {
+// //     give key/button chosen class and set to disabled
+// // } else {
     
-// }
-
+// // };
