@@ -4,7 +4,7 @@ let qwerty = document.getElementById('qwerty');
 let phrase = document.getElementById('phrase');
 let buttonReset = document.querySelector('.btn__reset');
 let startOverlay = document.getElementById('overlay');
-
+let btn = document.getElementById('qwerty').querySelectorAll('button');
 
 let missed = ('0')
 
@@ -64,11 +64,11 @@ function checkLetter(btn) {
     for (let i = 0; i < allLetters.length; i++) {
             
             if (btn.textContent === allLetters[i].textContent) {
-            btn.classList.add('show');
-            match = document.getElementsByClassName('show');
+                btn.classList.add('show');
+            } else {
+                return match;
             }
     } 
-    return match;     
 };
 
 //get all elements with the class of letter and loop over the letters.
@@ -111,10 +111,10 @@ function checkWin() {
 
 //LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED//
 
-// qwerty.addEventListener('click', e => {
-// if (btn = clicked) {
-//     //give key/button chosen class and set to disabled
-// } else {
+qwerty.addEventListener('click', e => {
+if (checkLetter) {
+    //give key/button chosen class and set to disabled
+} else {
     
-//     }
-// });
+    }
+});
