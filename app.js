@@ -5,6 +5,7 @@ let phrase = document.getElementById('phrase');
 let buttonReset = document.querySelector('.btn__reset');
 let startOverlay = document.getElementById('overlay');
 
+
 let missed = ('0')
 
 //PHRASES ARRAY//
@@ -64,6 +65,7 @@ function checkLetter(btn) {
             
             if (btn.textContent === allLetters[i].textContent) {
             btn.classList.add('show');
+            match = document.getElementsByClassName('show');
             }
     } 
     return match;     
@@ -75,26 +77,28 @@ function checkLetter(btn) {
 
 // CHECK IF THE GAME HAS BEEN WON OR LOST//
 
-const checkWin = () => {
-classLetter = getElementByClassName('letter');
-classShow =  getElementByClassName('show');
+function checkWin() {
 
-if (classLetter === classShow) {
-   //add WIN statements
-        startOverlay.classList.add('win');
-        //add headline text to show person won
-        headlineLost = document.createTextNode('The force is strong with you!');
-        startOverlay.style.display = ('flex'); 
-        //change display property of overlay to flex
-} else if (missed > 4) {
-   //add LOSE Statements
-        startOverlay.classList.add('lose');
-        //add headline text to show person lost
-        headlineLost = document.createTextNode('Patience you must have my young Padawan...');
-        //change display property of overlay to flex
-        startOverlay.style.display = ('flex'); 
-        //change display property of overlay to flex
-    }
+    const classLetter = document.getElementsByClassName('letter');
+    const classShow =  document.getElementsByClassName('show');
+
+    if (classLetter === classShow) {
+    //add WIN statements
+            startOverlay.classList.add('win');
+            //add headline text to show person won
+            headlineLost = document.createTextNode('The force is strong with you!');
+            startOverlay.style.display = ('flex'); 
+            //change display property of overlay to flex
+    } else if (missed >= 4) {
+    //add LOSE Statements
+            startOverlay.classList.add('lose');
+            //add headline text to show person lost
+            headlineLost = document.createTextNode('Patience you must have my young Padawan...');
+            //change display property of overlay to flex
+            startOverlay.style.display = ('flex'); 
+            //change display property of overlay to flex
+        }
+    checkWin();
 };
 
 //LISTEN FOR THE START GAME BUTTON TO BE PRESSED//
@@ -109,7 +113,8 @@ if (classLetter === classShow) {
 
 // qwerty.addEventListener('click', e => {
 // if (btn = clicked) {
-//     give key/button chosen class and set to disabled
+//     //give key/button chosen class and set to disabled
 // } else {
     
-// };
+//     }
+// });
