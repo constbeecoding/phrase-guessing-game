@@ -65,15 +65,13 @@ function checkLetter(btn) {
             
             if (btn.textContent === allLetters[i].textContent) {
                 btn.classList.add('show');
+                //if match, store button text in match variable
+                match = btn.textContent;
             } else {
                 return match;
             }
     } 
 };
-
-//get all elements with the class of letter and loop over the letters.
-//see if the letters match the button's letter
-
 
 // CHECK IF THE GAME HAS BEEN WON OR LOST//
 
@@ -112,9 +110,12 @@ function checkWin() {
 //LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED//
 
 qwerty.addEventListener('click', e => {
-if (checkLetter) {
-    //give key/button chosen class and set to disabled
-} else {
     
+    if (btn.clicked == true ) {
+    btn.classList.add('chosen');
+    btn.disabled = true;
+    } else {
+        
     }
+
 });
