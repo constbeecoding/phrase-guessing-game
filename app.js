@@ -79,18 +79,19 @@ function checkWin() {
     const classLetter = document.getElementsByClassName('letter');
     const classShow =  document.getElementsByClassName('show');
 
-    if (classLetter === classShow) {
+    if (classLetter.length === classShow.length) {
     //add WIN statements
             startOverlay.classList.add('win');
             //add headline text to show person won
-            headlineLost = document.createTextNode('The force is strong with you!');
+            startOverlay.innerHTML = "The force is strong with you!";
+            //change display property of overlay to flex
             startOverlay.style.display = ('flex'); 
             //change display property of overlay to flex
-    } else if (missed >= 4) {
+    } else if (missed >= 5) {
     //add LOSE Statements
             startOverlay.classList.add('lose');
             //add headline text to show person lost
-            headlineLost = document.createTextNode('Patience you must have my young Padawan...');
+            startOverlay.innerHTML = "Patience you must have my young Padawan...";
             //change display property of overlay to flex
             startOverlay.style.display = ('flex'); 
             //change display property of overlay to flex
@@ -118,3 +119,12 @@ qwerty.addEventListener('click', e => {
     }
     checkWin();
 });
+
+//Use event delgation to listen ONLY to button events from keyboard.
+    //when player chooses a letter, add .chosen class to button so
+    //the same letter can't be chosen twice. (disabled attribute for button)
+
+    //pass the button to Checkletter func.
+    //store the letter returned inside of a variable called letterFound. 
+//If done correctly, open the HTML file, click the letters and see them appear in the phrase.
+
