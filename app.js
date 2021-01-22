@@ -4,7 +4,7 @@ let qwerty = document.getElementById('qwerty');
 let phrase = document.getElementById('phrase');
 let buttonReset = document.querySelector('.btn__reset');
 let startOverlay = document.getElementById('overlay');
-let btn = document.querySelectorAll('#querty button');
+let btn = document.querySelectorAll("#qwerty button");
 
 let missed = ('0')
 
