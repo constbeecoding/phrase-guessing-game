@@ -118,3 +118,4 @@ qwerty.addEventListener('click', e => {
     }
 letterFound = checkLetter(btn);
 });
+console.log(letterFound);
