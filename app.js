@@ -116,5 +116,5 @@ qwerty.addEventListener('click', e => {
     } else {
         
     }
-
+letterFound = checkLetter(btn);
 });
