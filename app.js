@@ -63,14 +63,13 @@ function checkLetter(btn) {
 
     for (let i = 0; i < allLetters.length; i++) {
             
-            if (btn.textContent === allLetters[i].textContent) {
-                btn.classList.add('show');
-                //if match, store button text in match variable
-                match = btn.textContent;
-            } else {
-                return match;
-            }
+        if (btn === allLetters[i].textContent) {
+            allLetters.classList.add('show');
+            //if match, store button text in match variable
+            match = allLetters[i].textContent;
+        } 
     } 
+    return match;
 };
 
 // CHECK IF THE GAME HAS BEEN WON OR LOST//
