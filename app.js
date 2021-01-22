@@ -110,7 +110,7 @@ function checkWin() {
 //LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED//
 
 qwerty.addEventListener('click', e => {
-    
+    let btn = e.target;
     btn.classList.add('chosen');
 
     if (btn.classList.contains('chosen')) {
