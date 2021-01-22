@@ -111,13 +111,12 @@ function checkWin() {
 
 qwerty.addEventListener('click', e => {
     
-    if (btn.clicked == true ) {
     btn.classList.add('chosen');
-    btn.disabled = true;
-    } else {
-        
+
+    if (btn.classList.contains('chosen')) {
+        btn.disabled = true;
     }
-    checkWin();
+   letterFound = checkLetter(btn);
 });
 
 //Use event delgation to listen ONLY to button events from keyboard.
