@@ -95,7 +95,7 @@ function checkWin() {
             startOverlay.style.display = ('flex'); 
             //change display property of overlay to flex
         }
-    checkWin();
+    
 };
 
 //LISTEN FOR THE START GAME BUTTON TO BE PRESSED//
@@ -116,6 +116,5 @@ qwerty.addEventListener('click', e => {
     } else {
         
     }
-letterFound = checkLetter(btn);
+    checkWin();
 });
-console.log(letterFound);
