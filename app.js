@@ -99,13 +99,6 @@ function checkWin() {
     
 };
 
-//LISTEN FOR THE START GAME BUTTON TO BE PRESSED//
-
-// startButton.addEventListener('click', () => {
-
-
-
-// });
 
 //LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED//
 
@@ -117,13 +110,23 @@ qwerty.addEventListener('click', e => {
         btn.disabled = true;
     }
    letterFound = checkLetter(btn);
+
+   if (letterFound === null) {
+
+   }
 });
 
-//Use event delgation to listen ONLY to button events from keyboard.
-    //when player chooses a letter, add .chosen class to button so
-    //the same letter can't be chosen twice. (disabled attribute for button)
 
-    //pass the button to Checkletter func.
-    //store the letter returned inside of a variable called letterFound. 
-//If done correctly, open the HTML file, click the letters and see them appear in the phrase.
+//COUNT MISSED GUESSES IN THE GAME//
 
+//If checkLetter returns null, player guessed wrong.
+//in the event listener after checkletter is called, write a letterfound 
+
+
+//LISTEN FOR THE START GAME BUTTON TO BE PRESSED//
+
+// startButton.addEventListener('click', () => {
+
+
+
+// });
