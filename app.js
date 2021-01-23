@@ -115,7 +115,8 @@ for (let i=0; i < qwerty.length; i++) {
 
         if (letterFound === null) {
             tries = document.getElementsByClassName('tries')
-            //tries - change the img source
+            tries.src="images/lostStar.png";
+            // tries - change the img source
             missed ++;
         }
     })
