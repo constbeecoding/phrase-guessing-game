@@ -72,6 +72,31 @@ function checkLetter(btn) {
     return match;
 };
 
+
+//LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED//
+for (let i=0; i < qwerty.length; i++) {
+
+    qwerty[i].addEventListener('click', e => {
+        let btn = e.target;
+        btn.classList.add('chosen');
+
+        if (btn.classList.contains('chosen')) {
+            btn.disabled = true;
+        }
+
+        
+        const letterFound = checkLetter(btn);
+
+
+        // CHECK IF LETTER IS INCORRECT - CHANGE IMG
+        if (!letterFound) {
+            
+            const firstLiveStar = document.querySelector(".tries img[src='images/liveStar.png']")
+            firstLiveStar.setAttribute("src", "images/lostStar.png")
+            missed ++;
+        }
+    })
+}
 // CHECK IF THE GAME HAS BEEN WON OR LOST//
 
 function checkWin() {
@@ -99,31 +124,6 @@ function checkWin() {
     
 };
 
-
-//LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED//
-for (let i=0; i < qwerty.length; i++) {
-
-    qwerty[i].addEventListener('click', e => {
-        let btn = e.target;
-        btn.classList.add('chosen');
-
-        if (btn.classList.contains('chosen')) {
-            btn.disabled = true;
-        }
-
-        
-        const letterFound = checkLetter(btn);
-
-
-        // CHECK IF LETTER IS INCORRECT - CHANGE IMG
-        if (!letterFound) {
-            
-            const firstLiveStar = document.querySelector(".tries img[src='images/liveStar.png']")
-            firstLiveStar.setAttribute("src", "images/lostStar.png")
-            missed ++;
-        }
-    })
-}
 
 
 //LISTEN FOR THE START GAME BUTTON TO BE PRESSED//
