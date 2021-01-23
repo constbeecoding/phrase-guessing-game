@@ -110,16 +110,16 @@ for (let i=0; i < qwerty.length; i++) {
         if (btn.classList.contains('chosen')) {
             btn.disabled = true;
         }
+
         
-        const letterFound = document.getElementsByClassName('show');
-        letterFound = checkLetter(btn);
+        const letterFound = checkLetter(btn);
 
 
         // CHECK IF LETTER IS INCORRECT - CHANGE IMG
-        if (letterFound === null) {
-            tries = document.getElementsByClassName('tries')
-            tries.src="images/lostStar.png";
-            // tries - change the img source
+        if (!letterFound) {
+            
+            const tries = document.querySelector(".tries img[src='images/liveStar']")
+            tries.setAttribute("src", "images/lostStar.png")
             missed ++;
         }
     })
