@@ -118,8 +118,8 @@ for (let i=0; i < qwerty.length; i++) {
         // CHECK IF LETTER IS INCORRECT - CHANGE IMG
         if (!letterFound) {
             
-            const tries = document.querySelector(".tries img[src='images/liveStar']")
-            tries.setAttribute("src", "images/lostStar.png")
+            const firstLiveStar = document.querySelector(".tries img[src='images/liveStar.png']")
+            firstLiveStar.setAttribute("src", "images/lostStar.png")
             missed ++;
         }
     })
