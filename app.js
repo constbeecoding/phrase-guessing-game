@@ -113,7 +113,7 @@ for (let i=0; i < qwerty.length; i++) {
 
     letterFound = checkLetter(btn);
 
-        if (letterFound === null) {
+        if (checkLetter=== null) {
             tries = document.getElementsByClassName('tries')
             tries.src="images/lostStar.png";
             // tries - change the img source
