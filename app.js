@@ -6,7 +6,7 @@ let buttonReset = document.querySelector('.btn__reset');
 let startOverlay = document.getElementById('overlay');
 let btn = document.getElementById('qwerty').querySelectorAll('button');
 
-let missed = ('0')
+let missed = 0;
 
 //PHRASES ARRAY//
 
@@ -110,10 +110,13 @@ for (let i=0; i < qwerty.length; i++) {
         if (btn.classList.contains('chosen')) {
             btn.disabled = true;
         }
+        
+        const letterFound = document.getElementsByClassName('show');
+        letterFound = checkLetter(btn);
 
-    letterFound = checkLetter(btn);
 
-        if (checkLetter=== null) {
+        // CHECK IF LETTER IS INCORRECT - CHANGE IMG
+        if (letterFound === null) {
             tries = document.getElementsByClassName('tries')
             tries.src="images/lostStar.png";
             // tries - change the img source
