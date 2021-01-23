@@ -1,10 +1,10 @@
 // VARIABLES//
 
-let qwerty = document.getElementById('qwerty');
+let qwerty = document.querySelectorAll('#qwerty button');
 let phrase = document.getElementById('phrase');
 let buttonReset = document.querySelector('.btn__reset');
 let startOverlay = document.getElementById('overlay');
-let btn = document.querySelectorAll("#qwerty button");
+let btn = document.getElementById('qwerty').querySelectorAll('button');
 
 let missed = ('0')
 
@@ -102,6 +102,7 @@ function checkWin() {
 
 //LISTEN FOR THE ONSCREEN KEYBOARD TO BE CLICKED//
 for (let i=0; i < qwerty.length; i++) {
+
     qwerty[i].addEventListener('click', e => {
         let btn = e.target;
         btn.classList.add('chosen');
@@ -112,17 +113,13 @@ for (let i=0; i < qwerty.length; i++) {
 
     letterFound = checkLetter(btn);
 
-    if (letterFound === null) {
-
-    }
+        if (letterFound === null) {
+            tries = document.getElementsByClassName('tries')
+            //tries - change the img source
+            missed ++;
+        }
     })
 }
-
-//COUNT MISSED GUESSES IN THE GAME//
-
-
-//If checkLetter returns null, player guessed wrong.
-//in the event listener after checkletter is called, write a letterfound 
 
 
 //LISTEN FOR THE START GAME BUTTON TO BE PRESSED//
