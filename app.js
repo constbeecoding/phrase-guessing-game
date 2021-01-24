@@ -63,7 +63,7 @@ function checkLetter(btn) {
 
     for (let i = 0; i < allLetters.length; i++) {
             
-        if (btn === allLetters[i].textContent) {
+        if (btn.textContent === allLetters[i].textContent) {
             allLetters.classList.add('show');
             //if match, store button text in match variable
             match = allLetters[i].textContent;
