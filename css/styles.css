@@ -94,7 +94,7 @@ button {
 
 .show {
   color: #000;
-  background-color: #76CE82;
+  background-color: var(--color-lose);
 }
 
 /* Keyboard */
