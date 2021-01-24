@@ -8,6 +8,10 @@
 - [] Add an event listener to the keyboard. Listen for click event. Chosen and missed counters.
 - [] Create checkWin function. (li, dsplay overlay of flex)
 
+
+- [] Fix letters so they are all uppercase only for guesses
+- [] Change styling to look like star wars control panel
+- [] Fix Change overlay issue.
 ##Exceeds Expectations Criteria
 - [] Add transitions to the phrase display.
 - [] Add button to the "lose" and "win" overlays to reset game.
