@@ -30,6 +30,7 @@ buttonReset.addEventListener('click', () => {
 const getRandomPhraseAsArray = arr => {
     let i = Math.floor(Math.random() * arr.length); //random array is returned.
     return arr[i].split(''); //each letter and space in array is "split"
+    
 } 
 
 getRandomPhraseAsArray(phrases);
@@ -64,7 +65,7 @@ function checkLetter(btn) {
     for (let i = 0; i < allLetters.length; i++) {
             
         if (btn.textContent === allLetters[i].textContent) {
-            allLetters.classList.add('show');
+            allLetters[i].classList.add('show');
             //if match, store button text in match variable
             match = allLetters[i].textContent;
         } 
