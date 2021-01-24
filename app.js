@@ -60,6 +60,7 @@ addPhraseToDisplay(randomPhrase);
 
 function checkLetter(btn) {
     const allLetters = document.getElementsByClassName('letter'); //every letter in a phrase
+    
     let match = null; 
 
     for (let i = 0; i < allLetters.length; i++) {
@@ -80,7 +81,7 @@ for (let i=0; i < qwerty.length; i++) {
     qwerty[i].addEventListener('click', e => {
         let btn = e.target;
         btn.classList.add('chosen');
-
+        
         if (btn.classList.contains('chosen')) {
             btn.disabled = true;
         }
