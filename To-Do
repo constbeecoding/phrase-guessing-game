@@ -11,7 +11,7 @@
 
 - [] Fix letters so they are all uppercase only for guesses
 - [] Change styling to look like star wars control panel
-- [] Fix Change overlay issue.
+- [] Fix Change overlay issue. Line 97.
 ##Exceeds Expectations Criteria
 - [] Add transitions to the phrase display.
 - [] Add button to the "lose" and "win" overlays to reset game.
