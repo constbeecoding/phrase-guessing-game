@@ -105,7 +105,7 @@ button {
 }
 
 .chosen {
-  background: var(--color-neutral);
+  background: #000;
   border-radius: 5px;
   font-size: var(--font-size-medium);
   color: #FFFFFF;
