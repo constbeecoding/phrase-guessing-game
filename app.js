@@ -11,12 +11,14 @@ let missed = 0;
 //PHRASES ARRAY//
 
 const phrases = [
-    'Id just as soon kiss a Wookiee',
-    'Help me ObiWan Kenobi',
-    'May the force be with you',
-    'I find your lack of faith distrubing',
-    'Scruffy looking nerf herder'
+    'ID JUST AS SOON KISS A WOOKIE',
+    'HELP ME OBI WAN KENOBI',
+    'MAY THE FORCE BE WITH YOU',
+    'I FIND YOUR LACK OF FAITH DISTURBING',
+    'SCRUFFY LOOKING NERF HERDER'
 ];
+
+
 
 
 //START GAME -- BUTTON FUNCTION//
@@ -35,12 +37,14 @@ const getRandomPhraseAsArray = arr => {
 
 getRandomPhraseAsArray(phrases);
 
+
 //ADD THE LETTERS OF A STRING TO THE DISPLAY//
 
 function addPhraseToDisplay(arr) {
     for (let i = 0; i < arr.length; i++) {
         let li = document.createElement("LI");
         let ul = document.querySelector('ul');
+        
 
         li.textContent = arr[i];
         ul.appendChild(li);
