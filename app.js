@@ -101,6 +101,7 @@ for (let i=0; i < qwerty.length; i++) {
             firstLiveStar.setAttribute("src", "images/lostStar.png")
             missed +=1;
         } 
+        checkWin();
     })
 }
 // CHECK IF THE GAME HAS BEEN WON OR LOST//

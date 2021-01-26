@@ -5,13 +5,13 @@
 - [x] Attach event listener to "Start the Game Button" to hide Start Screen Overlay
 - [x] Create a getRandomPhraseAsArray function. Call it and pass phrases array to it.
 - [x] Create a function "stub" for checkLetter function. (use li elements, "show" class, return the match variable).
-- [] Add an event listener to the keyboard. Listen for click event. Chosen and missed counters.
-- [] Create checkWin function. (li, dsplay overlay of flex)
+- [x] Add an event listener to the keyboard. Listen for click event. Chosen and missed counters.
+- [x] Create checkWin function. (li, dsplay overlay of flex)
 
 
-- [] Fix letters so they are all uppercase only for guesses
-- [] Change styling to look like star wars control panel
-- [] Fix Change overlay issue. Line 97.
+- [x] Fix letters so they are all uppercase only for guesses
+- [x] Fix Change overlay issue. Line 97.
+
 ##Exceeds Expectations Criteria
 - [] Add transitions to the phrase display.
 - [] Add button to the "lose" and "win" overlays to reset game.
