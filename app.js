@@ -99,7 +99,7 @@ for (let i=0; i < qwerty.length; i++) {
             
             const firstLiveStar = document.querySelector(".tries img[src='images/liveStar.png']")
             firstLiveStar.setAttribute("src", "images/lostStar.png")
-            missed ++;
+            missed +=1;
         }
     })
 }
