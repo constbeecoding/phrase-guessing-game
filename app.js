@@ -73,6 +73,7 @@ function checkLetter(btn) {
             allLetters[i].classList.add('show');
             //if match, store button text in match variable
             match = allLetters[i].textContent;
+    
         } 
     } 
     return match;
@@ -86,8 +87,10 @@ for (let i=0; i < qwerty.length; i++) {
         let btn = e.target;
         btn.classList.add('chosen');
         
+
         if (btn.classList.contains('chosen')) {
             btn.disabled = true;
+           
         }
 
         
@@ -112,13 +115,22 @@ function checkWin() {
     const classShow =  document.getElementsByClassName('show');
 
     if (classLetter.length === classShow.length) {
-    //add WIN statements
+  
+        //add WIN statements
             startOverlay.classList.add('win');
             //add headline text to show person won
             startOverlay.innerHTML = "The force is strong with you!";
             //change display property of overlay to flex
             startOverlay.style.display = ('flex'); 
             //change display property of overlay to flex
+            
+            //Adding reset button
+            const gameResetButton = document.createElement("button");
+            gameResetButton.classList.add('btn__reset');
+            gameResetButton.innerHTML = "Use the force again?";
+            
+            startOverlay.appendChild(gameResetButton);
+
     } else if (missed >= 5) {
     //add LOSE Statements
             startOverlay.classList.add('lose');
@@ -127,16 +139,28 @@ function checkWin() {
             //change display property of overlay to flex
             startOverlay.style.display = ('flex'); 
             //change display property of overlay to flex
+            
+            //Adding reset button
+            const gameResetButton = document.createElement("button");
+            gameResetButton.classList.add('btn__reset');
+            gameResetButton.innerHTML = "Practice more patience?";
+            
+            startOverlay.appendChild(gameResetButton);
         }
-    
+
+        
 };
 
+// if gameResetButton.addEventListener('click', e => {
+//     gameResetButton = e.target;
+//     window.location.reload();
 
+//     });
 
-//LISTEN FOR THE START GAME BUTTON TO BE PRESSED//
+// function gameReset() {
+//     if(startOverlay = '.win', 'lose') {
+        
 
-// startButton.addEventListener('click', () => {
+//     }
 
-
-
-// });
+// }
