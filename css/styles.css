@@ -95,6 +95,7 @@ button {
 .show {
   color: #000;
   background-color: var(--color-lose);
+  transition: all 1s cubic-bezier(0, 0, 0.18, 1);
 }
 
 /* Keyboard */
@@ -109,6 +110,8 @@ button {
   border-radius: 5px;
   font-size: var(--font-size-medium);
   color: #FFFFFF;
+  
+
 }
 
 .btn__reset {
@@ -117,7 +120,14 @@ button {
   margin: 50px auto;
   background: #FFFFFF;
   border-radius: 5px;
+  border: 2px solid black;
   font-size: var(--font-size-medium);
+}
+
+.btn__reset:hover {
+transition: background 1s ease;
+background: #000;
+color: #fff;
 }
 
 /* Overlay */
@@ -141,6 +151,7 @@ button {
 
 .start {
   background-color: #fff;
+  font-size: var(--font-size-large);
 }
 
 .start a {
