@@ -151,16 +151,34 @@ function checkWin() {
         
 };
 
-// if gameResetButton.addEventListener('click', e => {
-//     gameResetButton = e.target;
-//     window.location.reload();
 
-//     });
+function gameReset () {
 
-// function gameReset() {
-//     if(startOverlay = '.win', 'lose') {
-        
+    const gameResetButton = document.getElementsByTagName("button");
+    gameResetButton.addEventListener('click', () => {
+    startOverlay.style.display = "none";
 
-//     }
+    // //set the missed variable back to 0
+    missed = 0;
+    // // Set the hearts / deathstars back to the live images
+    firstLiveStar = document.querySelector(".tries img[src='images/liveStar.png']")
+    
+    // Clear the phrase ul
+    
 
-// }
+    // Enable the buttons
+    
+
+    // Remove the chosen class from those aswell
+    
+
+    // Call your functions to generate and display a new random phrase
+
+    gameReset();
+    // getRandomPhraseAsArray(phrases);
+    // addPhraseToDisplay(randomPhrase);
+    // checkWin(btn);
+    // checkWin();
+    });
+
+};
