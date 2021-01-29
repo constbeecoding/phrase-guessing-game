@@ -24,6 +24,25 @@ const phrases = [
 //START GAME -- BUTTON FUNCTION//
 
 buttonReset.addEventListener('click', () => {
+    //set the missed variable back to 0
+    missed = 0;
+    //Set the hearts/deathstars back to the live images
+    starImages = document.querySelectorAll(".tries img");
+    starImages.forEach(starImage => {
+        starImage.src = "images/liveStar.png";
+    });
+
+    //Clear phrase UL
+
+    //Enable the buttons
+
+    //Remove the chosen class from those as well
+    btn.classList.remove('chosen');
+   
+    const randomPhrase = getRandomPhraseAsArray(phrases);
+
+    addPhraseToDisplay(randomPhrase);
+
     startOverlay.style.display = "none";
 });
 
@@ -35,7 +54,7 @@ const getRandomPhraseAsArray = arr => {
     
 } 
 
-getRandomPhraseAsArray(phrases);
+
 
 
 //ADD THE LETTERS OF A STRING TO THE DISPLAY//
@@ -56,8 +75,7 @@ function addPhraseToDisplay(arr) {
         }  
     }
 };
-const randomPhrase = getRandomPhraseAsArray(phrases);
-addPhraseToDisplay(randomPhrase);
+
 
 
 // //CHECK IF A LETTER IS IN THE PHRASE//
@@ -113,72 +131,35 @@ function checkWin() {
 
     const classLetter = document.getElementsByClassName('letter');
     const classShow =  document.getElementsByClassName('show');
+    const title = document.querySelector('.title');
 
     if (classLetter.length === classShow.length) {
   
         //add WIN statements
             startOverlay.classList.add('win');
             //add headline text to show person won
-            startOverlay.innerHTML = "The force is strong with you!";
+            title.textContent = "The force is strong with you!";
             //change display property of overlay to flex
             startOverlay.style.display = ('flex'); 
-            //change display property of overlay to flex
+            
             
             //Adding reset button
-            const gameResetButton = document.createElement("button");
-            gameResetButton.classList.add('btn__reset');
-            gameResetButton.innerHTML = "Use the force again?";
-            
-            startOverlay.appendChild(gameResetButton);
+            buttonReset.textContent = "Use the force again?"
 
     } else if (missed >= 5) {
     //add LOSE Statements
             startOverlay.classList.add('lose');
             //add headline text to show person lost
-            startOverlay.innerHTML = "Patience you must have my young Padawan...";
+            title.textContent = "Patience you must have my young Padawan...";
             //change display property of overlay to flex
             startOverlay.style.display = ('flex'); 
-            //change display property of overlay to flex
+           
             
             //Adding reset button
-            const gameResetButton = document.createElement("button");
-            gameResetButton.classList.add('btn__reset');
-            gameResetButton.innerHTML = "Practice more patience?";
-            
-            startOverlay.appendChild(gameResetButton);
+            buttonReset.textContent = "Practice more patience?";
         }
 
         
 };
 
 
-function gameReset () {
-
-    const gameResetButton = document.getElementsByTagName("button");
-    gameResetButton.addEventListener('click', () => {
-    startOverlay.style.display = "none";
-
-    // //set the missed variable back to 0
-    missed = 0;
-    // // Set the hearts / deathstars back to the live images
-    firstLiveStar = document.querySelector(".tries img[src='images/liveStar.png']")
-    
-    // Clear the phrase ul
-    
-
-    // Enable the buttons
-    
-
-    // Remove the chosen class from those aswell
-    
-
-    // Call your functions to generate and display a new random phrase
-
-    gameReset();
-    // getRandomPhraseAsArray(phrases);
-    // addPhraseToDisplay(randomPhrase);
-    // checkWin(btn);
-    // checkWin();
-    });
-
-};
