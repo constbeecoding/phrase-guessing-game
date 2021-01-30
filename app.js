@@ -37,7 +37,7 @@ buttonReset.addEventListener('click', () => {
     //Enable the buttons
 
     //Remove the chosen class from those as well
-    btn.classList.remove('chosen');
+    document.getElementsByClassName('chosen').styl,m, e.display = "none";
    
     const randomPhrase = getRandomPhraseAsArray(phrases);
 
@@ -108,7 +108,6 @@ for (let i=0; i < qwerty.length; i++) {
 
         if (btn.classList.contains('chosen')) {
             btn.disabled = true;
-           
         }
 
         
