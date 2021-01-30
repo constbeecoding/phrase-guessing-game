@@ -13,5 +13,9 @@
 - [x] Fix Change overlay issue. Line 97.
 
 ##Exceeds Expectations Criteria
-- [] Add transitions to the phrase display.
-- [] Add button to the "lose" and "win" overlays to reset game.
+- [x] Add transitions to the phrase display.
+- [x] Add button to the "lose" and "win" overlays to reset game.
+
+##Extra Features
+- [] Create a dynamic Star Wars control panel.
+- [] Remove Word Wrap.
