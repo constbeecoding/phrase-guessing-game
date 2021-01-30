@@ -33,11 +33,16 @@ buttonReset.addEventListener('click', () => {
     });
 
     //Clear phrase UL
+    const ul = phrase.querySelector('ul');
+    ul.innerHTML = '';
 
     //Enable the buttons
-
-    //Remove the chosen class from those as well
-    document.getElementsByClassName('chosen').styl,m, e.display = "none";
+    qwerty.forEach(button => {
+        button.removeAttribute('disabled');
+        button.classList.remove('chosen');
+    });
+    
+    
    
     const randomPhrase = getRandomPhraseAsArray(phrases);
 
