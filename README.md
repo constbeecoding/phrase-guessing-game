@@ -1,4 +1,4 @@
-# **A Game Show App**
+# **A Phrase Guessing Game**
 
 ## Let me tell you, learning JavaScript was a learning curve! This was the first time I was really trying to write Vanilla JS from scratch whilst referring to documentation. I am proud of what I am learning because of this project though!
 
